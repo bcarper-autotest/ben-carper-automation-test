@@ -12,7 +12,7 @@ const orderHistoryPage = require('../pages/order-history.page');
 const updateAddressPage = require('../pages/update-address.page');
 
 describe('Checkout', () => {
-    it.skip('should update price to reflect changes in cart', async () => {        
+    it('should update price to reflect changes in cart', async () => {        
         await homePage.open()
         await homePage.clickProduct(4)
         await productPage.clickAddToCart()
@@ -41,7 +41,7 @@ describe('Checkout', () => {
         await shoppingCartPage.deleteProduct(0)
     })
 
-    it.skip('should remove item when delete is clicked', async () => {        
+    it('should remove item when delete is clicked', async () => {        
         await homePage.open()
         await homePage.clickProduct(4)
         await productPage.clickAddToCart()
@@ -63,7 +63,7 @@ describe('Checkout', () => {
         await shoppingCartPage.deleteProduct(0)
     })
 
-    it.skip('should remove item from cart when quantity is zero', async () => {        
+    it('should remove item from cart when quantity is zero', async () => {        
         await homePage.open()
         await homePage.clickProduct(4)
         await productPage.clickAddToCart()
@@ -126,7 +126,7 @@ describe('Checkout', () => {
         await orderHistoryPage.clickSignOut()
     })
 
-    it.skip('should successfully check out using pay by bank wire with new user', async () => {        
+    it('should successfully check out using pay by bank wire with new user', async () => {        
         await homePage.open()
         await homePage.clickProduct(4)
         await productPage.clickAddToCart()
@@ -192,7 +192,7 @@ describe('Checkout', () => {
         await orderHistoryPage.clickSignOut()
     })
 
-    it.skip('should add new delievery address during checkout', async () => {        
+    it('should add new delievery address during checkout', async () => {        
         await homePage.open()
         await homePage.clickProduct(4)
         await productPage.clickAddToCart()
@@ -280,7 +280,7 @@ describe('Checkout', () => {
         await deliveryAddressPage.clickSignOut()
     })
 
-    it.skip('should add new invoice address during checkout', async () => {        
+    it('should add new invoice address during checkout', async () => {        
         await homePage.open()
         await homePage.clickProduct(4)
         await productPage.clickAddToCart()
@@ -368,7 +368,7 @@ describe('Checkout', () => {
         await deliveryAddressPage.clickSignOut()
     })
 
-    it.skip('should successfully check out using pay by check with new user', async () => {        
+    it('should successfully check out using pay by check with new user', async () => {        
         await homePage.open()
         await homePage.clickProduct(4)
         await productPage.clickAddToCart()
