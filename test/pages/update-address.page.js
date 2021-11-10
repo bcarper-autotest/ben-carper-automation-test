@@ -102,19 +102,19 @@ class UpdateAddressesPage {
         return this.lstCountry.getValue()
     }
 
-    async setHomePhone(phone) {
+    async setPhone(phone) {
         await this.txtPhone.setValue(phone)
     }
 
-    async getHomePhone() {
+    async getPhone() {
         return this.txtPhone.getValue()
     }
 
-    async setMobilePhone(phone) {
+    async setMobile(phone) {
         await this.txtMobile.setValue(phone)
     }
 
-    async getMobilePhone() {
+    async getMobile() {
         return this.txtMobile.getValue()
     }
 
@@ -124,6 +124,10 @@ class UpdateAddressesPage {
 
     async getAdditionalInformation() {
         return this.txtOther.getValue()
+    }
+
+    async setAlias(alias) {
+        this.txtAlias.setValue(alias)
     }
 
     async getAlias() {

@@ -3,7 +3,7 @@
 
 Run: npm install in root directory to install dependencies.
 
-Run: npm run test-all to run all tests
+Run: npm run all-tests to run all tests
 
 Run: npm run checkout to run checkout tests
 

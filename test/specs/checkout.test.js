@@ -14,7 +14,7 @@ const updateAddressPage = require('../pages/update-address.page');
 describe('Checkout', () => {
     it('should update price to reflect changes in cart', async () => {        
         await homePage.open()
-        await homePage.clickProduct(4)
+        await homePage.clickProduct(3)
         await productPage.clickAddToCart()
         await productPage.clickCheckout()
 
@@ -42,8 +42,9 @@ describe('Checkout', () => {
     })
 
     it('should remove item when delete is clicked', async () => {        
+        await orderHistoryPage.open()
         await homePage.open()
-        await homePage.clickProduct(4)
+        await homePage.clickProduct(3)
         await productPage.clickAddToCart()
         await productPage.clickContinueShopping()
         await browser.back()
@@ -64,8 +65,9 @@ describe('Checkout', () => {
     })
 
     it('should remove item from cart when quantity is zero', async () => {        
+        await orderHistoryPage.open()
         await homePage.open()
-        await homePage.clickProduct(4)
+        await homePage.clickProduct(3)
         await productPage.clickAddToCart()
         await productPage.clickContinueShopping()
         await browser.back()
@@ -100,8 +102,9 @@ describe('Checkout', () => {
     })
 
     it('should successfully check out using bank wire with existing user', async () => {        
+        await orderHistoryPage.open()
         await homePage.open()
-        await homePage.clickProduct(4)
+        await homePage.clickProduct(3)
         await productPage.clickAddToCart()
         await productPage.clickContinueShopping()
         await browser.back()
@@ -126,9 +129,10 @@ describe('Checkout', () => {
         await orderHistoryPage.clickSignOut()
     })
 
-    it('should successfully check out using pay by bank wire with new user', async () => {        
+    it('should successfully check out using pay by bank wire with new user', async () => { 
+        await orderHistoryPage.open()       
         await homePage.open()
-        await homePage.clickProduct(4)
+        await homePage.clickProduct(3)
         await productPage.clickAddToCart()
         await productPage.clickContinueShopping()
         await browser.back()
@@ -192,9 +196,10 @@ describe('Checkout', () => {
         await orderHistoryPage.clickSignOut()
     })
 
-    it('should add new delievery address during checkout', async () => {        
+    it('should add new delievery address during checkout', async () => {
+        await orderHistoryPage.open()
         await homePage.open()
-        await homePage.clickProduct(4)
+        await homePage.clickProduct(3)
         await productPage.clickAddToCart()
         await productPage.clickContinueShopping()
         await browser.back()
@@ -246,7 +251,7 @@ describe('Checkout', () => {
         await CreateAccountPage.clickSubmitAccount()
 
         await deliveryAddressPage.clickUseDeliveryAddressAsBillingAddress()
-        var exists = await delieveryAddressPage.btnAddNewAddressInvoice.isExisting()
+        var exists = await deliveryAddressPage.btnAddNewAddressInvoice.isExisting()
         expect(exists).toEqual(true)
 
         await deliveryAddressPage.clickAddNewAddress()        
@@ -281,8 +286,9 @@ describe('Checkout', () => {
     })
 
     it('should add new invoice address during checkout', async () => {        
+        await orderHistoryPage.open()
         await homePage.open()
-        await homePage.clickProduct(4)
+        await homePage.clickProduct(3)
         await productPage.clickAddToCart()
         await productPage.clickContinueShopping()
         await browser.back()
@@ -334,7 +340,7 @@ describe('Checkout', () => {
         await CreateAccountPage.clickSubmitAccount()
 
         await deliveryAddressPage.clickUseDeliveryAddressAsBillingAddress()
-        var exists = await delieveryAddressPage.btnAddNewAddressInvoice.isExisting()
+        var exists = await deliveryAddressPage.btnAddNewAddressInvoice.isExisting()
         expect(exists).toEqual(true)
 
         await deliveryAddressPage.clickAddNewInvoiceAddress()        
@@ -368,9 +374,10 @@ describe('Checkout', () => {
         await deliveryAddressPage.clickSignOut()
     })
 
-    it('should successfully check out using pay by check with new user', async () => {        
+    it('should successfully check out using pay by check with new user', async () => {   
+        await orderHistoryPage.open()     
         await homePage.open()
-        await homePage.clickProduct(4)
+        await homePage.clickProduct(3)
         await productPage.clickAddToCart()
         await productPage.clickContinueShopping()
         await browser.back()

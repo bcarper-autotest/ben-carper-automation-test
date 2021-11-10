@@ -5,6 +5,7 @@ const MyAddressesPage = require('../pages/my-addresses.page')
 const faker = require('faker');
 const UpdateAddressPage = require('../pages/update-address.page');
 const PersonalInformationPage = require('../pages/personal-information.page');
+const Utils = require('../utils/utils')
 
 describe('Registration', () => {
     it('should successfully register account and save information', async () => {
@@ -70,8 +71,8 @@ describe('Registration', () => {
         var cityVal = await UpdateAddressPage.getCity()
         var stateVal = await UpdateAddressPage.getState()
         var zipVal = await UpdateAddressPage.getZip()
-        var homeVal = await UpdateAddressPage.getHomePhone()
-        var mobileVal = await UpdateAddressPage.getMobilePhone()
+        var homeVal = await UpdateAddressPage.getPhone()
+        var mobileVal = await UpdateAddressPage.getMobile()
         var otherVal = await UpdateAddressPage.getAdditionalInformation()
         var aliasVal = await UpdateAddressPage.getAlias()
 

@@ -13,8 +13,7 @@ class MyAccountPage extends Page {
     }
 
     async open() {
-        super.open()
-        await browser.url('my-account')
+        super.open('my-account')
     }
 }
 

@@ -19,6 +19,10 @@ module.exports = class Page {
         await this.mnuDresses.click()
     }
 
+    async clickWomen() {
+        await this.mnuWomen.click()
+    }
+
     async clickTShirts() {
         await this.mnuWomen.moveTo()
         await this.btnTShirts.waitForDisplayed()
